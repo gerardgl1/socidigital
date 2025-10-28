@@ -25,12 +25,17 @@ const Hero = () => {
 
           {/* Headline */}
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6 fade-in-delay leading-tight">
-            Fem que la tecnologia treballi per al teu negoci.
+            Fem que el teu negoci treballi per tu.
           </h1>
 
           {/* Subheadline */}
-          <p className="text-xl sm:text-2xl text-white/90 mb-12 fade-in-delay max-w-2xl mx-auto">
-            Menys tasques repetitives, més temps per al que importa.
+          <p className="text-xl sm:text-2xl text-white/90 mb-4 fade-in-delay max-w-2xl mx-auto">
+            Automatitzacions i IA per reduir temps i errors en les teves tasques diàries.
+          </p>
+
+          {/* Subtitle */}
+          <p className="text-base sm:text-lg text-white/70 mb-12 fade-in-delay max-w-xl mx-auto">
+            El teu soci digital, en català i sense complicacions.
           </p>
 
           {/* CTA Button */}
@@ -38,9 +43,9 @@ const Hero = () => {
             <Button
               onClick={scrollToContact}
               size="lg"
-              className="bg-coral hover:bg-coral/90 text-white font-semibold px-8 py-6 text-lg rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
+              className="bg-coral hover:bg-navy text-white font-semibold px-8 py-6 text-lg rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
             >
-              Vull automatitzar el meu negoci
+              Explica'm com treballes i t'ajudaré a automatitzar-ho
               <ArrowRight className="ml-2 h-5 w-5" />
             </Button>
           </div>

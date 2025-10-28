@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
+import { Checkbox } from "@/components/ui/checkbox";
 import { Mail, Instagram } from "lucide-react";
 import { useState } from "react";
 import { toast } from "sonner";
@@ -11,12 +12,20 @@ const FinalCTA = () => {
     email: "",
     message: "",
   });
+  const [consent, setConsent] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // In production, this would send to a backend
+    
+    if (!consent) {
+      toast.error("Has d'acceptar la política de privacitat per continuar.");
+      return;
+    }
+
+    // TODO: Implement with Supabase or Formspree
     toast.success("Missatge enviat! Ens posarem en contacte aviat.");
     setFormData({ name: "", email: "", message: "" });
+    setConsent(false);
   };
 
   return (
@@ -64,10 +73,26 @@ const FinalCTA = () => {
                 className="min-h-32 text-lg rounded-xl resize-none"
               />
             </div>
+            <div className="flex items-start gap-3">
+              <Checkbox
+                id="consent"
+                checked={consent}
+                onCheckedChange={(checked) => setConsent(checked as boolean)}
+                required
+                className="mt-1"
+              />
+              <label htmlFor="consent" className="text-sm text-muted-foreground cursor-pointer">
+                Accepto la{" "}
+                <a href="/privadesa" className="underline hover:text-coral transition-colors">
+                  política de privacitat
+                </a>
+                .
+              </label>
+            </div>
             <Button
               type="submit"
               size="lg"
-              className="w-full bg-coral hover:bg-coral/90 text-white font-semibold py-6 text-lg rounded-xl shadow-lg hover:shadow-xl transition-all duration-300"
+              className="w-full bg-coral hover:bg-navy text-white font-semibold py-6 text-lg rounded-xl shadow-lg hover:shadow-xl transition-all duration-300"
             >
               Envia'ns un missatge
             </Button>

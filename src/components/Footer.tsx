@@ -34,8 +34,21 @@ const Footer = () => {
           </div>
 
           <div className="border-t border-white/10 pt-8">
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-4 text-sm text-white/60">
+              <a href="/avis-legal" className="hover:text-coral transition-colors">
+                Avís legal
+              </a>
+              <span className="hidden sm:inline text-white/30">·</span>
+              <a href="/privadesa" className="hover:text-coral transition-colors">
+                Política de privacitat
+              </a>
+              <span className="hidden sm:inline text-white/30">·</span>
+              <a href="/cookies" className="hover:text-coral transition-colors">
+                Política de cookies
+              </a>
+            </div>
             <p className="text-white/50 text-sm text-center">
-              © {new Date().getFullYear()} SOCI DIGITAL. Tots els drets reservats.
+              © {new Date().getFullYear()} SOCI DIGITAL · info@socidigital.cat
             </p>
           </div>
         </div>
