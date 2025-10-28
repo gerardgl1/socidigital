@@ -1,0 +1,16 @@
+{
+  "name": "SOCI DIGITAL",
+  "short_name": "SOCI DIGITAL",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#F8F9FA",
+  "theme_color": "#1C3F5E",
+  "description": "Automatitzacions i IA per a negocis locals. Simplifica, automatitza, creix.",
+  "icons": [
+    {
+      "src": "/favicon.ico",
+      "sizes": "48x48",
+      "type": "image/x-icon"
+    }
+  ]
+}

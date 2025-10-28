@@ -13,19 +13,37 @@ const FinalCTA = () => {
     message: "",
   });
   const [consent, setConsent] = useState(false);
+  const [hp, setHp] = useState("");
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    
+    if (hp) return; // Anti-spam honeypot
     
     if (!consent) {
       toast.error("Has d'acceptar la política de privacitat per continuar.");
       return;
     }
 
-    // TODO: Implement with Supabase or Formspree
-    toast.success("Missatge enviat! Ens posarem en contacte aviat.");
-    setFormData({ name: "", email: "", message: "" });
-    setConsent(false);
+    try {
+      const res = await fetch("https://formspree.io/f/xovavdzb", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      });
+      
+      if (res.ok) {
+        toast.success("Missatge enviat! Ens posarem en contacte aviat.");
+        setFormData({ name: "", email: "", message: "" });
+        setConsent(false);
+        // @ts-ignore - Plausible analytics
+        window.plausible?.("form_submit");
+      } else {
+        toast.error("Error en l'enviament. Torna-ho a provar més tard.");
+      }
+    } catch {
+      toast.error("Error de connexió. Revisa la teva xarxa.");
+    }
   };
 
   return (
@@ -73,6 +91,16 @@ const FinalCTA = () => {
                 className="min-h-32 text-lg rounded-xl resize-none"
               />
             </div>
+            {/* Honeypot anti-spam field */}
+            <input
+              type="text"
+              value={hp}
+              onChange={(e) => setHp(e.target.value)}
+              className="hidden"
+              tabIndex={-1}
+              autoComplete="off"
+              aria-hidden="true"
+            />
             <div className="flex items-start gap-3">
               <Checkbox
                 id="consent"

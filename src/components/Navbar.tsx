@@ -12,6 +12,12 @@ const Navbar = () => {
     setIsOpen(false);
   };
 
+  const handleCTAClick = () => {
+    // @ts-ignore - Plausible analytics
+    window.plausible?.("cta_navbar_click");
+    scrollToSection("contact");
+  };
+
   const menuItems = [
     { label: "Com treballem", id: "how-we-work" },
     { label: "Casos", id: "cases" },
@@ -43,7 +49,7 @@ const Navbar = () => {
               </button>
             ))}
             <Button
-              onClick={() => scrollToSection("contact")}
+              onClick={handleCTAClick}
               className="bg-coral hover:bg-navy text-white font-semibold px-6 py-2 rounded-lg transition-all duration-300"
             >
               Començar
@@ -72,7 +78,7 @@ const Navbar = () => {
               </button>
             ))}
             <Button
-              onClick={() => scrollToSection("contact")}
+              onClick={handleCTAClick}
               className="w-full mt-4 bg-coral hover:bg-navy text-white font-semibold py-3 rounded-lg transition-all duration-300"
             >
               Començar

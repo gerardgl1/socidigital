@@ -4,6 +4,8 @@ import logo from "@/assets/soci-digital-logo.png";
 
 const Hero = () => {
   const scrollToContact = () => {
+    // @ts-ignore - Plausible analytics
+    window.plausible?.("cta_hero_click");
     document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" });
   };
 
