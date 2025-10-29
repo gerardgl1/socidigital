@@ -1,10 +1,19 @@
 import { ArrowLeft } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useNavigate } from "react-router-dom";
+import { useEffect } from "react";
 import Footer from "@/components/Footer";
 
 const Privadesa = () => {
   const navigate = useNavigate();
+  
+  useEffect(() => {
+    document.title = "Política de Privacitat · SOCI DIGITAL";
+    const metaDescription = document.querySelector('meta[name="description"]');
+    if (metaDescription) {
+      metaDescription.setAttribute('content', 'Política de privacitat de SOCI DIGITAL. Informació sobre el tractament de dades personals, finalitats, base legal i drets RGPD.');
+    }
+  }, []);
 
   return (
     <div className="min-h-screen bg-off-white">
@@ -21,16 +30,13 @@ const Privadesa = () => {
         <div className="max-w-4xl mx-auto bg-white rounded-2xl p-8 sm:p-12 shadow-md">
           <h1 className="text-4xl font-bold text-navy mb-8">Política de Privacitat</h1>
 
-          <div className="space-y-6 text-muted-foreground">
-            <section>
-              <h2 className="text-2xl font-semibold text-navy mb-4">1. Informació general</h2>
-              <p>
-                SOCI DIGITAL (d'ara endavant, el Responsable) posa a la teva disposició la present Política de Privacitat amb la finalitat d'informar-te sobre el tractament de les teves dades personals quan navegues pel nostre lloc web socidigital.cat.
-              </p>
-            </section>
+          <p className="text-lg text-muted-foreground mb-8">
+            A SOCI DIGITAL, ens prenem molt seriosament la teva privacitat i la protecció de les teves dades personals d'acord amb el Reglament General de Protecció de Dades (RGPD).
+          </p>
 
+          <div className="space-y-8 text-muted-foreground">
             <section>
-              <h2 className="text-2xl font-semibold text-navy mb-4">2. Responsable del tractament</h2>
+              <h2 className="text-2xl font-semibold text-navy mb-4">1. Responsable del tractament</h2>
               <p>
                 <strong>Identitat:</strong> SOCI DIGITAL
                 <br />
@@ -41,52 +47,26 @@ const Privadesa = () => {
             </section>
 
             <section>
-              <h2 className="text-2xl font-semibold text-navy mb-4">3. Dades que recollim</h2>
-              <p>
-                Quan ens contactes a través del formulari de contacte, recollirem les següents dades personals:
+              <h2 className="text-2xl font-semibold text-navy mb-4">2. Tractament de dades del formulari</h2>
+              <p className="mb-4">
+                <strong>Finalitat:</strong> Gestionar les consultes rebudes a través del formulari de contacte i donar resposta a les teves preguntes sobre els nostres serveis d'automatització i IA.
               </p>
-              <ul className="list-disc list-inside mt-4 space-y-2">
-                <li>Nom complet</li>
-                <li>Adreça de correu electrònic</li>
-                <li>Missatge o consulta que ens enviïs</li>
-              </ul>
-            </section>
-
-            <section>
-              <h2 className="text-2xl font-semibold text-navy mb-4">4. Finalitat del tractament</h2>
-              <p>
-                Les teves dades personals seran tractades amb les següents finalitats:
+              <p className="mb-4">
+                <strong>Base legal:</strong> El teu consentiment en acceptar la política de privacitat en el moment d'enviar el formulari.
               </p>
-              <ul className="list-disc list-inside mt-4 space-y-2">
-                <li>Respondre les teves consultes i sol·licituds d'informació</li>
-                <li>Gestionar i mantenir la relació comercial amb tu</li>
-                <li>Enviar-te informació sobre els nostres serveis, si ens has donat el teu consentiment</li>
-              </ul>
-            </section>
-
-            <section>
-              <h2 className="text-2xl font-semibold text-navy mb-4">5. Legitimació</h2>
+              <p className="mb-4">
+                <strong>Temps de conservació:</strong> Les dades es conservaran mentre sigui necessari per donar resposta a la teva consulta i durant el temps que la llei obliga a mantenir la documentació comercial.
+              </p>
+              <p className="mb-4">
+                <strong>Destinataris:</strong> Les dades es processen a través de Formspree (proveïdor de formularis) i no es cedeixen a tercers llevat d'obligació legal.
+              </p>
               <p>
-                La base legal per al tractament de les teves dades és el teu consentiment, que ens dones quan ens envies el formulari de contacte.
+                <strong>Dades recollides:</strong> Nom, email i el missatge que ens enviïs.
               </p>
             </section>
 
             <section>
-              <h2 className="text-2xl font-semibold text-navy mb-4">6. Conservació de les dades</h2>
-              <p>
-                Les teves dades personals es conservaran mentre sigui necessari per complir amb les finalitats per a les quals es van recollir i, en tot cas, durant el temps que exigeixi la legislació aplicable.
-              </p>
-            </section>
-
-            <section>
-              <h2 className="text-2xl font-semibold text-navy mb-4">7. Destinataris de les dades</h2>
-              <p>
-                Les teves dades personals no seran comunicades a tercers, excepte obligació legal.
-              </p>
-            </section>
-
-            <section>
-              <h2 className="text-2xl font-semibold text-navy mb-4">8. Drets de l'usuari</h2>
+              <h2 className="text-2xl font-semibold text-navy mb-4">3. Drets de l'usuari (RGPD)</h2>
               <p>
                 Tens dret a:
               </p>
@@ -104,7 +84,7 @@ const Privadesa = () => {
             </section>
 
             <section>
-              <h2 className="text-2xl font-semibold text-navy mb-4">9. Seguretat</h2>
+              <h2 className="text-2xl font-semibold text-navy mb-4">4. Seguretat</h2>
               <p>
                 SOCI DIGITAL ha adoptat les mesures tècniques i organitzatives necessàries per garantir la seguretat i integritat de les dades personals que tracta, així com per evitar la seva pèrdua, alteració i/o accés per part de tercers no autoritzats.
               </p>

@@ -4,18 +4,18 @@ const ValueProposition = () => {
   const features = [
     {
       icon: MessageCircle,
-      title: "Automatitzacions de DMs i reserves",
-      description: "Respon clients sense perdre temps.",
+      title: "Respon automàticament DMs i reserves",
+      description: "Estalvia fins a 5 hores setmanals en recordatoris i confirmacions.",
     },
     {
       icon: Settings,
       title: "Processos intel·ligents amb IA",
-      description: "Estalvia hores en tasques manuals.",
+      description: "Automatitza factures, inventari i seguiment de clients.",
     },
     {
       icon: Star,
-      title: "Solucions a mida per al teu negoci",
-      description: "Sense complicacions tècniques.",
+      title: "Ressenyes en 1 clic",
+      description: "Simplifica la recollida de feedback després de cada servei.",
     },
   ];
 

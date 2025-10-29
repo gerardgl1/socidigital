@@ -11,6 +11,9 @@ const Footer = () => {
             <p className="text-white/90 text-lg font-medium mb-2">
               Simplifica. Automatitza. Creix.
             </p>
+            <p className="text-white/60 text-sm">
+              Sense complicacions tècniques. En català.
+            </p>
           </div>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-6 mb-8">

@@ -31,13 +31,8 @@ const Hero = () => {
           </h1>
 
           {/* Subheadline */}
-          <p className="text-xl sm:text-2xl text-white/90 mb-4 fade-in-delay max-w-2xl mx-auto">
-            Automatitzacions i IA per reduir temps i errors en les teves tasques diàries.
-          </p>
-
-          {/* Subtitle */}
-          <p className="text-base sm:text-lg text-white/70 mb-12 fade-in-delay max-w-xl mx-auto">
-            El teu soci digital, en català i sense complicacions.
+          <p className="text-xl sm:text-2xl text-white/90 mb-12 fade-in-delay max-w-2xl mx-auto">
+            Automatitzacions i IA en català per eliminar tasques repetitives i reduir errors.
           </p>
 
           {/* CTA Button */}

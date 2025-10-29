@@ -1,10 +1,19 @@
 import { ArrowLeft } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useNavigate } from "react-router-dom";
+import { useEffect } from "react";
 import Footer from "@/components/Footer";
 
 const AvisLegal = () => {
   const navigate = useNavigate();
+  
+  useEffect(() => {
+    document.title = "Avís Legal · SOCI DIGITAL";
+    const metaDescription = document.querySelector('meta[name="description"]');
+    if (metaDescription) {
+      metaDescription.setAttribute('content', 'Avís legal de SOCI DIGITAL. Informació legal sobre el titular i les condicions d\'ús del servei.');
+    }
+  }, []);
 
   return (
     <div className="min-h-screen bg-off-white">
