@@ -22,14 +22,7 @@ const Hero = () => {
         <div className="max-w-4xl mx-auto text-center">
           {/* Logo */}
           <div className="mb-12 fade-in">
-            <img 
-              src={logo} 
-              alt="SOCI DIGITAL" 
-              className="h-24 sm:h-32 mx-auto brightness-0 invert" 
-              width={128} 
-              height={128}
-              decoding="async"
-            />
+            <img src={logo} alt="SOCI DIGITAL" className="h-24 sm:h-32 mx-auto" />
           </div>
 
           {/* Headline */}

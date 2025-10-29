@@ -7,15 +7,7 @@ const Footer = () => {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto">
           <div className="flex flex-col items-center text-center mb-8">
-            <img 
-              src={logo} 
-              alt="SOCI DIGITAL" 
-              className="h-16 mb-6 brightness-0 invert" 
-              width={64} 
-              height={64}
-              decoding="async"
-              loading="lazy"
-            />
+            <img src={logo} alt="SOCI DIGITAL" className="h-16 mb-6 brightness-0 invert" />
             <p className="text-white/90 text-lg font-medium mb-2">
               Simplifica. Automatitza. Creix.
             </p>

@@ -11,17 +11,7 @@ const Privadesa = () => {
     document.title = "Política de Privacitat · SOCI DIGITAL";
     const metaDescription = document.querySelector('meta[name="description"]');
     if (metaDescription) {
-      metaDescription.setAttribute('content', 'Política de privacitat de SOCI DIGITAL: tractament de dades personals, finalitats, base legal i drets RGPD.');
-    }
-    
-    const ogDescription = document.querySelector('meta[property="og:description"]');
-    if (ogDescription) {
-      ogDescription.setAttribute('content', 'Política de privacitat de SOCI DIGITAL: tractament de dades personals, finalitats, base legal i drets RGPD.');
-    }
-    
-    const twitterDescription = document.querySelector('meta[name="twitter:description"]');
-    if (twitterDescription) {
-      twitterDescription.setAttribute('content', 'Política de privacitat de SOCI DIGITAL: tractament de dades personals, finalitats, base legal i drets RGPD.');
+      metaDescription.setAttribute('content', 'Política de privacitat de SOCI DIGITAL. Informació sobre el tractament de dades personals, finalitats, base legal i drets RGPD.');
     }
   }, []);
 
