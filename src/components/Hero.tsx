@@ -37,15 +37,29 @@ const Hero = () => {
 
           {/* CTA Button */}
           <div className="fade-in-delay">
-            <Button
-              onClick={scrollToContact}
-              size="lg"
-              className="bg-coral hover:bg-navy text-white font-semibold px-8 py-6 text-lg rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
-            >
-              Explica'm com treballes i t'ajudaré a automatitzar-ho
-              <ArrowRight className="ml-2 h-5 w-5" />
-            </Button>
-          </div>
+  <Button
+    onClick={scrollToContact}
+    size="lg"
+    className="
+      bg-coral hover:bg-navy text-white font-semibold rounded-xl
+      shadow-lg transition-all duration-300 hover:shadow-xl sm:hover:scale-105
+
+      w-[90%] max-w-[360px] sm:w-auto sm:max-w-none mx-auto
+      inline-flex items-center justify-center gap-2 text-center
+
+      px-5 sm:px-8 py-3.5 sm:py-6
+      text-[15px] sm:text-lg leading-snug
+    "
+    aria-label="Explica'm com treballes i t'ajudaré a automatitzar-ho"
+  >
+    <span className="text-balance">
+      Explica'm com treballes i t'ajudaré a automatitzar-ho
+    </span>
+    <ArrowRight className="ml-1 h-4 w-4 sm:h-5 sm:w-5 shrink-0" />
+  </Button>
+</div>
+
+
         </div>
       </div>
 
