@@ -5,7 +5,7 @@ const CasePractice = () => {
     {
       icon: Calendar,
       title: "Recordatoris automàtics per fisioterapeutes",
-      result: "-35% plantons",
+      result: "-35% d'absències",
       description: "Sistema de recordatoris intel·ligent que redueix les absències.",
     },
     {
