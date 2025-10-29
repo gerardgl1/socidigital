@@ -11,7 +11,17 @@ const Cookies = () => {
     document.title = "Política de Cookies · SOCI DIGITAL";
     const metaDescription = document.querySelector('meta[name="description"]');
     if (metaDescription) {
-      metaDescription.setAttribute('content', 'Política de cookies de SOCI DIGITAL. Informació sobre l\'ús de Plausible Analytics sense cookies al nostre lloc web.');
+      metaDescription.setAttribute('content', 'Política de cookies de SOCI DIGITAL: fem servir Plausible sense cookies i no utilitzem cookies no essencials.');
+    }
+    
+    const ogDescription = document.querySelector('meta[property="og:description"]');
+    if (ogDescription) {
+      ogDescription.setAttribute('content', 'Política de cookies de SOCI DIGITAL: fem servir Plausible sense cookies i no utilitzem cookies no essencials.');
+    }
+    
+    const twitterDescription = document.querySelector('meta[name="twitter:description"]');
+    if (twitterDescription) {
+      twitterDescription.setAttribute('content', 'Política de cookies de SOCI DIGITAL: fem servir Plausible sense cookies i no utilitzem cookies no essencials.');
     }
   }, []);
 

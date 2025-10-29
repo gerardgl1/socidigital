@@ -11,7 +11,17 @@ const AvisLegal = () => {
     document.title = "Avís Legal · SOCI DIGITAL";
     const metaDescription = document.querySelector('meta[name="description"]');
     if (metaDescription) {
-      metaDescription.setAttribute('content', 'Avís legal de SOCI DIGITAL. Informació legal sobre el titular i les condicions d\'ús del servei.');
+      metaDescription.setAttribute('content', 'Avís legal de SOCI DIGITAL: informació del titular, contacte i condicions d\'ús del lloc web.');
+    }
+    
+    const ogDescription = document.querySelector('meta[property="og:description"]');
+    if (ogDescription) {
+      ogDescription.setAttribute('content', 'Avís legal de SOCI DIGITAL: informació del titular, contacte i condicions d\'ús del lloc web.');
+    }
+    
+    const twitterDescription = document.querySelector('meta[name="twitter:description"]');
+    if (twitterDescription) {
+      twitterDescription.setAttribute('content', 'Avís legal de SOCI DIGITAL: informació del titular, contacte i condicions d\'ús del lloc web.');
     }
   }, []);
 
