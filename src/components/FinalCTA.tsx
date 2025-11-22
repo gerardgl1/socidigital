@@ -19,9 +19,9 @@ const FinalCTA = () => {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    
+
     if (hp) return; // Anti-spam honeypot
-    
+
     if (!consent) {
       toast.error("Has d'acceptar la política de privacitat per continuar.");
       return;
@@ -32,7 +32,7 @@ const FinalCTA = () => {
     try {
       const res = await fetch("https://formspree.io/f/mnnovvnn", {
         method: "POST",
-        headers: { 
+        headers: {
           "Content-Type": "application/json",
           "Accept": "application/json"
         },
@@ -42,12 +42,13 @@ const FinalCTA = () => {
           utm: Object.fromEntries(new URLSearchParams(window.location.search))
         }),
       });
-      
+
       if (res.ok) {
         toast.success("Missatge enviat correctament! Ens posarem en contacte amb tu aviat.");
         setFormData({ name: "", email: "", message: "" });
         setConsent(false);
-        // @ts-ignore - Plausible analytics
+        setFormData({ name: "", email: "", message: "" });
+        setConsent(false);
         window.plausible?.("form_submit");
       } else {
         toast.error("Hi ha hagut un error en l'enviament. Si us plau, torna-ho a provar més tard.");
@@ -65,7 +66,7 @@ const FinalCTA = () => {
         <div className="max-w-3xl mx-auto">
           {/* Accent bar */}
           <div className="w-24 h-1 bg-coral mx-auto mb-8"></div>
-          
+
           <div className="text-center mb-12">
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-navy mb-4">
               Vols aplicar-ho al teu negoci?
